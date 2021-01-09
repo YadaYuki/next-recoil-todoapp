@@ -11,7 +11,7 @@ export default function TodoApp() {
       <h3>{todosCount}</h3>
       <TodoCreater />
       {todos.map((todoItem) => (
-        <TodoItem key={todoItem.id} todo={todoItem.text} />
+        <TodoItem id={todoItem.id} key={todoItem.id} todo={todoItem.text} />
       ))}
     </div>
   )

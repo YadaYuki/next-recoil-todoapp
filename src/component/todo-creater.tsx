@@ -23,7 +23,6 @@ const TodoCreater: React.FC<Props> = () => {
                 {
                     id: prevTodos.length,
                     text: inputText,
-                    isComplete: false,
                 },
             ]);
             setInputText("")
@@ -36,5 +35,6 @@ const TodoCreater: React.FC<Props> = () => {
         </div>
     )
 }
+
 
 export default TodoCreater
