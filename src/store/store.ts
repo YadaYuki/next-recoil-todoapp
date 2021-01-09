@@ -1,6 +1,8 @@
 import { atom } from 'recoil'
 
-export const text = atom({
-  key: 'text',
-  default: "",
+const initialTodo:string[] = []
+
+export const todos = atom({
+  key: 'todos',
+  default: initialTodo,
 })
