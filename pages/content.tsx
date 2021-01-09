@@ -1,13 +1,12 @@
-import { useState } from "react"
-
-interface Props { }
+import {useRecoilState} from "recoil"
+import *  as store from "../src/store/store"
 
 const Content = () => {
-    const [word, setWord] = useState("")
+    const [text, setText] = useRecoilState(store.text);
     return (
     <div>
-        <input onChange={(e)=>{setWord(e.target.value)}}/>
-        <h1>{word}</h1>
+        <input onChange={(e)=>{setText(e.target.value)}}/>
+        <h1>{text}</h1>
     </div>
     )
 }
