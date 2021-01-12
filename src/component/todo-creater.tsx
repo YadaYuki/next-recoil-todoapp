@@ -1,22 +1,22 @@
 import { useState } from 'react'
-import { useSetRecoilState } from 'recoil';
-import { todosState } from "../store/store"
+import { useSetRecoilState } from 'recoil'
+import { todosState } from '../store/store'
 
-interface Props { }
+interface Props {}
 
 const TodoCreater: React.FC<Props> = () => {
-    const [inputText, setInputText] = useState('');
-    const setTodos = useSetRecoilState(todosState);
+    const [inputText, setInputText] = useState('')
+    const setTodos = useSetRecoilState(todosState)
     const onChange = ({ target: { value } }) => {
         if (value.length === 0) {
-            alert("TODOを入力してください")
+            alert('TODOを入力してください')
         } else {
-            setInputText(value);
+            setInputText(value)
         }
-    };
+    }
     const onClick = () => {
         if (inputText.length === 0) {
-            alert("TODOを入力してください")
+            alert('TODOを入力してください')
         } else {
             setTodos((prevTodos) => [
                 ...prevTodos,
@@ -24,9 +24,9 @@ const TodoCreater: React.FC<Props> = () => {
                     id: prevTodos.length,
                     text: inputText,
                 },
-            ]);
-            setInputText("")
-        };
+            ])
+            setInputText('')
+        }
     }
     return (
         <div>
@@ -35,6 +35,5 @@ const TodoCreater: React.FC<Props> = () => {
         </div>
     )
 }
-
 
 export default TodoCreater
