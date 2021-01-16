@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { todosState } from '../store/store'
+import { todosState } from '../store/todo'
 
 interface Props {}
 
@@ -23,6 +23,7 @@ const TodoCreater: React.FC<Props> = () => {
                 {
                     id: prevTodos.length,
                     text: inputText,
+                    isCompleted: false,
                 },
             ])
             setInputText('')
