@@ -1,14 +1,15 @@
 import { useRecoilValue } from 'recoil'
-import { todosState, todosCountState } from '../src/store/store'
-import TodoItem from '../src/component/todo-item'
-import TodoCreater from '../src/component/todo-creater'
-
+import { todosState, todosCountState } from '../store/todo'
+import TodoItem from '../component/todo-item'
+import TodoCreater from '../component/todo-creater'
+import Counter from '../component/counter'
 export default function TodoApp() {
     const todos = useRecoilValue(todosState)
     const todosCount = useRecoilValue(todosCountState)
     return (
         <div>
-            <h3>{todosCount}</h3>
+            <h1>TODO App </h1>
+            <Counter />
             <TodoCreater />
             {todos.map((todoItem) => (
                 <TodoItem

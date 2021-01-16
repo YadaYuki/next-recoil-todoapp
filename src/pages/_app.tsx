@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app'
-import '../styles/globals.css'
+import '../../styles/globals.css'
 import { RecoilRoot } from 'recoil'
 
 function App({ Component, pageProps }: AppProps) {
